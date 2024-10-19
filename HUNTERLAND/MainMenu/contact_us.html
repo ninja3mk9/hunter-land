@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: #fff;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>تواصل معنا</h1>
+        <p>إذا كان لديك أي استفسارات أو تحتاج إلى دعم، يرجى الاتصال بنا عبر البريد الإلكتروني أو الهاتف.</p>
+        <div class="buttons">
+            <button onclick="navigateTo('home.html')">الصفحة الرئيسية</button>
+            <button onclick="navigateTo('news.html')">أخبار</button>
+            <button onclick="navigateTo('contact_us.html')">اتصل بنا</button>
+            <button onclick="navigateTo('report.html')">تقرير</button>
+            <button onclick="navigateTo('support.html')">الدعم الفني</button>
+            <button onclick="navigateTo('posts.html')">المنشورات</button>
+            <button onclick="navigateTo('updates.html')">آخر التحديثات</button>
+            <button onclick="navigateTo('founders.html')">مؤسسين الموقع</button>
+        </div>
+    </div>
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

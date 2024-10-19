@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختر لغتك</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #fff;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeInDown 2s ease-in-out;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: #fff;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>اهلا بك , في الموقع الرسمي لهنتر لاند من فضلك اختر لغتك</h1>
+        <p>&copy; @hss_0 , @fr3_nn</p>
+        <h2>-----------------------</h2>
+        <div class="buttons">
+            <button onclick="navigateTo('home.html')">العربية</button>
+            <button onclick="navigateTo('home.html')">English</button>
+        </div>
+    </div>
+    <script>
+        function navigateTo(language) {
+            const container = document.querySelector('.container');
+            container.style.animation = 'fadeOutUp 1s ease-in-out';
+            setTimeout(() => {
+                window.location.href = language;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
